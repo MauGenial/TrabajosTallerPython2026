@@ -27,8 +27,7 @@ def eje2dif():
     arr=[]
     for i in range(4):
         arr.append(int(input("Ingrese un numero entero")))
-    sum(arr)
-    print("Primer digito : ", n1," Segundo digito : ", n2, " Tercer digito : ", n3, " Cuarto digito : ", n4, " Resultado : ", r)
+    print("Suma de todos los numeros : ", sum(arr))
 #eje2dif()
 
 def eje3():
@@ -99,8 +98,8 @@ def eje9():
     print("--Ejercicio 9 ejecutandose--")
     n1=int(input("Ingresar fecha en DDMMAAAA "))
     m=n1%1000000
-    me=int(m/10000)  
-    d=int(n1/1000000)
+    me=int(m//10000)  
+    d=int(n1//1000000)
     a=n1%10000
     print("La fecha de hoy es : ", "Dia : ", d, "Mes :", me ,"Año : ", a)
     print(d,me,a)
@@ -120,9 +119,14 @@ def eje10():
 
 def eje11():
     print("--Ejercicio 11 ejecutandose--")
+    v=0
+    i=0
     n1=int(input("Ingresar la cantidad de autos vendidos : "))
-    n2=int(input("Ingresar el valor de todos los autos vendidos : "))
-    v= n2*0.05
+    arr=[]
+    while i < n1:
+        arr.append(int(input(f"Ingrese el valor del auto N°{i+1} : ")))
+        v +=arr[i]*0.05
+        i += 1
     r=5500+(n1*200)+v
     print("Su salario este mes sera de : ", r)
 #eje11()
