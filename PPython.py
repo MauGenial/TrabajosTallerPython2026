@@ -76,6 +76,17 @@ def eje7():
     print("Suma de los numeros : ", S, " Promedio : ", r)
 #eje7()
 
+def eje7alt():
+    print("--Ejercicio 7 ejecutandose--")
+    arr=[]
+    for i in range(4):
+        arr.append(int(input("Ingrese un numero entero")))
+    sum(arr)
+    r= S/6
+    print("Suma de los numeros : ", S, " Promedio : ", r)
+#eje7alt()
+
+
 def eje8():
     print("--Ejercicio 8 ejecutandose--")
     n1=float(input("Ingresar el primer digito "))
@@ -87,11 +98,13 @@ def eje8():
 def eje9():
     print("--Ejercicio 9 ejecutandose--")
     n1=int(input("Ingresar fecha en DDMMAAAA "))
-    n2=int(input("Ingresar el segundo digito "))
-    n3=int(input("Ingresar el segundo digito "))    
-    r=(n1/n2)*100
-    print("Area del triangulo : ", r, "%")
-#eje9() -- SIN TERMINAR --
+    m=n1%1000000
+    me=int(m/10000)  
+    d=int(n1/1000000)
+    a=n1%10000
+    print("La fecha de hoy es : ", "Dia : ", d, "Mes :", me ,"Año : ", a)
+    print(d,me,a)
+#eje9()
 
 def eje10():
     print("--Ejercicio 10 ejecutandose--")
