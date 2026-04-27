@@ -121,12 +121,13 @@ def eje11():
     print("--Ejercicio 11 ejecutandose--")
     v=0
     i=0
-    n1=int(input("Ingresar la cantidad de autos vendidos : "))
-    arr=[]
-    while i < n1:
-        arr.append(int(input(f"Ingrese el valor del auto N°{i+1} : ")))
-        v +=arr[i]*0.05
+    sueldobase=5500
+    r= sueldobase
+    while True:
+        valor = int(input(f"Sueldo mensual aproximado : {r} | Ingrese el valor del auto N°{i+1} (Ponga 0 si terminó) : "))
+        if valor == 0: break
+        v +=valor*0.05
         i += 1
-    r=5500+(n1*200)+v
-    print("Su salario este mes sera de : ", r)
+        r = sueldobase + (i*200) +v
+    print("Sueldo final : ", r)
 #eje11()
